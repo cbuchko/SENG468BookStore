@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Connors Assignment</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body { padding-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Connor Buchko SENG 468 Assignmnent 2</h1>
+    </div>
+    <div style="margin-bottom: 50px;"> Welcome to my book store. We own every book in existence, so feel free to order anything you want. </div>
+    <div style="display: flex; flex-direction: columns; justify-content: space-between;">
+	    <div>
+		    <h2 style="margin-bottom: 0">
+		      Place an order:
+		    </h2>
+		    <div style="margin-bottom: 15px; font-size: 0.9rem;"><i>all orders are $10</i></div>
+		    <form action="/store/orders/" method="GET" style="display: flex; flex-direction: column;">
+			    <label for="book_title">
+			      Book Title
+			    </label>
+			    <input id="book_title" type="text" name="book_field" />
+			    <label for="book_author">
+			      Book Author
+			    </label>
+			    <input id="book_author" type="text" name="author_field" />
+			    <label for="address">
+			      Delivery Address
+			    </label>
+			    <input id="address" type="text" name="address_field" />
+			    <input type="submit" value="Confirm Order" style="margin-top: 20px;"/>
+		    </form>
+	    </div>
+            <img src="/static/books.jpg" alt="books" style="width: 40%" />
+    </div>
+    <div style="display: flex; justify-content: flex-end; margin-top:15px;">
+         <a href="/admin">Go to admin page</a>
+    </div>
+  </div>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Connors Assignment</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body { padding-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Connor Buchko SENG 468 Assignmnent 2</h1>
+    </div>
+    <div>
+	This is the admin page. Orders are sorted by most recent to least recent.
+    </div> 
+    <form action="/" method="GET" style="display: flex; flex-direction: column;">
+        <input type="submit" value="Return to Home Page" style="margin-top: 20px;"/>
+    </form>
+    <ul style="margin-top: 20px;">
+    	<% orders.forEach(function(order){ %>
+		<li style="list-style: none; background-color: #D3D3D3; border: solid; display: flex; flex-direction: row; justify-content: space-around; padding: 10px 20px;">
+			<div>
+				<div>Date: </div>
+				<div><%= order.date %></div>
+			</div>
+			<div>
+				<div>Book Title: </div>
+				<div><%= order.book_field %></div>
+			</div>
+			<div>
+				<div>Book Author: </div>
+				<div><%= order.author_field %></div>
+			</div>
+			<div>
+				<div>Delivery Address: </div>
+				<div><%= order.address_field %></div>
+			</div>
+		</li>
+	<% }); %>
+    </ul>
+</body>
+</html>
